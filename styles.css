@@ -107,11 +107,15 @@ h1, h2, h3, h4, h5, h6 {
     padding: 1.2rem 24px;
 }
 
-.logo h1 {
-    font-size: 1.7rem;
-    color: var(--corporate-blue);
-    font-weight: 800;
-    letter-spacing: -0.5px;
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo img {
+    height: 45px;
+    width: auto;
 }
 
 .logo .tagline {
@@ -826,6 +830,12 @@ h1, h2, h3, h4, h5, h6 {
     grid-template-columns: 2fr 1fr 1fr;
     gap: 4rem;
     margin-bottom: 3rem;
+}
+
+.footer-brand img {
+    height: 50px;
+    width: auto;
+    margin-bottom: 1rem;
 }
 
 .footer-brand h3 {

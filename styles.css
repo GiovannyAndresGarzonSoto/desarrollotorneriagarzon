@@ -863,10 +863,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
+    display: flex;
     gap: 4rem;
     margin-bottom: 3rem;
+}
+
+.footer-brand {
+    flex: 1.5;
+}
+
+.footer-links,
+.footer-services {
+    flex: 1;
 }
 
 .footer-brand img {
@@ -877,7 +885,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .footer-brand h3 {
     color: var(--corporate-blue);
-    margin-bottom: 1.2rem;
+    margin-bottom: 1rem;
     font-size: 1.65rem;
     font-weight: 800;
 }
@@ -886,6 +894,7 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--text-secondary);
     line-height: 1.7;
     font-size: 0.93rem;
+    max-width: 320px;
 }
 
 .footer-links h4,
@@ -904,23 +913,19 @@ h1, h2, h3, h4, h5, h6 {
 .footer-links li,
 .footer-services li {
     margin-bottom: 0.8rem;
+    color: var(--text-secondary);
+    font-size: 0.93rem;
 }
 
 .footer-links a {
     color: var(--text-secondary);
     text-decoration: none;
-    transition: color 0.3s, padding-left 0.3s;
+    transition: color 0.3s;
     font-size: 0.93rem;
 }
 
 .footer-links a:hover {
     color: var(--corporate-blue-light);
-    padding-left: 6px;
-}
-
-.footer-services li {
-    color: var(--text-secondary);
-    font-size: 0.93rem;
 }
 
 .footer-bottom {
@@ -994,8 +999,12 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .footer-grid {
-        grid-template-columns: 1fr;
+        flex-direction: column;
         gap: 2.5rem;
+    }
+
+    .footer-brand p {
+        max-width: none;
     }
 
     .about-features {

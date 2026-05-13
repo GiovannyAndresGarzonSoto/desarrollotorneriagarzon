@@ -113,10 +113,13 @@ h1, h2, h3, h4, h5, h6 {
     gap: 12px;
 }
 
-.logo img {
-    height: 45px;
-    width: auto;
-}
+    .logo img {
+        height: 38px;
+    }
+
+    .logo .tagline {
+        font-size: 0.55rem;
+    }
 
 .logo .tagline {
     display: block;
@@ -897,22 +900,24 @@ h1, h2, h3, h4, h5, h6 {
     flex: 1.5;
 }
 
+.footer-brand .logo {
+    margin-bottom: 1rem;
+}
+
+.footer-brand .logo img {
+    height: 50px;
+    width: auto;
+}
+
+.footer-brand .logo .tagline {
+    font-size: 0.8rem;
+    color: var(--corporate-blue);
+    letter-spacing: 1px;
+}
+
 .footer-links,
 .footer-services {
     flex: 1;
-}
-
-.footer-brand img {
-    height: 50px;
-    width: auto;
-    margin-bottom: 1rem;
-}
-
-.footer-brand h3 {
-    color: var(--corporate-blue);
-    margin-bottom: 1rem;
-    font-size: 1.65rem;
-    font-weight: 800;
 }
 
 .footer-brand p {

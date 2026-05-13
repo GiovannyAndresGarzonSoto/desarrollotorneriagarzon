@@ -360,7 +360,7 @@ h1, h2, h3, h4, h5, h6 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
     gap: 2rem;
-    max-width: 700px;
+    max-width: 950px;
     margin: 0 auto;
 }
 
@@ -712,23 +712,43 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .contact-grid {
-    display: flex;
-    gap: 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
     margin-top: 3.5rem;
-    align-items: flex-start;
+    align-items: stretch;
 }
 
 .contact-map {
+    display: flex;
+}
+
+.contact-map .map-item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-map .map-container {
     flex: 1;
-    min-width: 0;
+    display: flex;
+}
+
+.contact-map .map-container iframe {
+    flex: 1;
+    height: auto;
+    min-height: 300px;
 }
 
 .contact-details {
-    flex: 1;
-    min-width: 0;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 1.5rem;
+    align-content: start;
+}
+
+.contact-details .info-item:last-child {
+    grid-column: 1 / -1;
 }
 
 .info-item {
@@ -774,6 +794,11 @@ h1, h2, h3, h4, h5, h6 {
 .map-container {
     margin-top: 0.6rem;
     line-height: 0;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 320px;
 }
 
 .map-link {
@@ -994,8 +1019,16 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .contact-grid {
-        flex-direction: column;
-        gap: 2.5rem;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .contact-details {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-map .map-container iframe {
+        min-height: 220px;
     }
 
     .footer-grid {
